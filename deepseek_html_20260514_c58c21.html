@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>TidyDataTribe · Data Analytics</title>
+    <!-- Font Awesome 6 for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b1a2f 0%, #1a2f40 100%);
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            margin: 0;
+        }
+
+        .linktree-card {
+            max-width: 560px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: rgba(18, 30, 44, 0.65);
+            border-radius: 2.5rem;
+            padding: 2.5rem 2rem 2.2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(74, 144, 226, 0.2);
+            text-align: center;
+            transition: all 0.2s ease;
+            color: #e6f0fa;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4a90e2;
+            box-shadow: 0 8px 18px rgba(0,160,255,0.3);
+            margin-bottom: 1.1rem;
+            background: #1e3349;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #b3e0ff, #7bb3e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #aac8e0;
+            margin-bottom: 2rem;
+            border-bottom: 1px dashed rgba(74, 144, 226, 0.5);
+            padding-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+        }
+
+        .subhead i {
+            font-size: 0.9rem;
+            color: #5fa3e0;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 1.8rem 0 2rem;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            background: rgba(20, 40, 60, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(74, 144, 226, 0.35);
+            padding: 1rem 1.5rem;
+            border-radius: 3rem;
+            color: #f0f7ff;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            letter-spacing: 0.3px;
+        }
+
+        .link-btn i {
+            font-size: 1.5rem;
+            width: 2rem;
+            text-align: center;
+            color: #7bb3e0;
+        }
+
+        .link-btn:hover {
+            background: rgba(45, 85, 125, 0.7);
+            border-color: #7bb3e0;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 24px rgba(0, 160, 255, 0.25);
+            color: white;
+        }
+
+        .link-btn:hover i {
+            color: #c0e1ff;
+        }
+
+        /* Instagram gradient accent */
+        .ig-btn:hover {
+            border-color: #d94f7a;
+            background: rgba(70, 40, 70, 0.7);
+        }
+        .ig-btn i {
+            color: #f0947c;
+        }
+
+        /* Fiverr green accent */
+        .fiverr-btn:hover {
+            border-color: #1dbf73;
+            background: rgba(20, 70, 50, 0.7);
+        }
+        .fiverr-btn i {
+            color: #3fca82;
+        }
+
+        /* LinkedIn blue accent */
+        .linkedin-btn:hover {
+            border-color: #0a66c2;
+            background: rgba(10, 50, 90, 0.7);
+        }
+        .linkedin-btn i {
+            color: #3b8ed4;
+        }
+
+        .footer-note {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #7f9bb5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-note i {
+            color: #4a90e2;
+        }
+
+        /* responsiveness */
+        @media (max-width: 450px) {
+            .linktree-card {
+                padding: 2rem 1.3rem 1.8rem;
+            }
+            .link-btn {
+                font-size: 1rem;
+                padding: 0.9rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="linktree-card">
+        <!-- Profile image (replace with your own branding image URL) -->
+        <img src="https://i.ibb.co/0jqKtMg/tidydatatribe-logo.png" 
+             alt="TidyDataTribe logo" 
+             class="profile-pic"
+             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%231a2f40%22/%3E%3Ctext x=%2250%22 y=%2255%22 font-size=%2245%22 text-anchor=%22middle%22 fill=%22%234a90e2%22 font-family=%22Arial%22%3E📊%3C/text%3E%3C/svg%3E';">
+
+        <h1>TidyDataTribe</h1>
+        <div class="subhead">
+            <i class="fas fa-chart-line"></i> Data Analytics &amp; Visualization <i class="fas fa-database"></i>
+        </div>
+
+        <div class="links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/tidydatatribe/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="link-btn ig-btn">
+                <i class="fab fa-instagram"></i> @TidyDataTribe
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/muhammad-bin-kashif-bb8944370" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="link-btn linkedin-btn">
+                <i class="fab fa-linkedin-in"></i> Muhammad Bin Kashif
+            </a>
+
+            <!-- Fiverr Gig -->
+            <a href="https://www.fiverr.com/mbk567/clean-organize-analyze-and-visualize-your-messy-datasets?utm_medium=shared&utm_source=copy_link&utm_campaign=base_gig_create_share&utm_term=BR98kDy&view=gig&gig_id=482255491" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="link-btn fiverr-btn">
+                <i class="fas fa-magic"></i> Clean &amp; Visualize Your Data
+            </a>
+        </div>
+
+        <div class="footer-note">
+            <i class="fas fa-chart-pie"></i> turning messy data into clear stories
+        </div>
+    </div>
+</body>
+</html>
